@@ -1,0 +1,30 @@
+/*
+#  ____        __ _  
+# |  _ \ ___  / _(_) 
+# | |_) / _ \| |_| | 
+# |  _ < (_) |  _| | 
+# |_| \_\___/|_| |_| 
+#                    
+# ----------------------------------------------------- 
+*/
+
+
+/* ---- Configuration ---- */
+configuration {
+    modi:                       "combi";
+    combi-modes:                "drun,run,calc";
+    font:                       "Fira Sans 11";
+    show-icons:                 true;
+    icon-theme:                 "kora";
+    display-drun:               "APPS";
+    display-run:                "RUN";
+    display-filebrowser:        "FILES";
+    display-window:             "WINDOW";
+  	hover-select:               true;
+    me-select-entry:            "";
+    me-accept-entry:            "MousePrimary";
+    drun-display-format:        "{name}";
+    window-format:              "{w} · {c} · {t}";
+    
+}
+

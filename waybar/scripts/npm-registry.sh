@@ -1,6 +1,6 @@
 #!/bin/bash
 # Arquivo: ~/.config/waybar/scripts/npm-registry.sh
-# Script melhorado para exibir o registry atual do npm/pnpm
+# Script para exibir o registry atual do npm/pnpm
 
 # Função para extrair e formatar o registry completo
 extract_registry_name() {

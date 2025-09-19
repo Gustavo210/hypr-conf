@@ -11,6 +11,7 @@
         "~/.config/waybar/modules.json"
     ],
     "modules-left": [
+        "custom/telegram",
         "custom/appmenu",
         "group/quicklinks",
         "hyprland/window"

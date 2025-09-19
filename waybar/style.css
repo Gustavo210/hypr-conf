@@ -152,6 +152,7 @@ window#waybar.empty #window {
 #pulseaudio,
 #battery,
 #custom-appmenu,
+#custom-telegram,
 #clock {
     margin-right: 20px;
     font-size: 20px;
@@ -180,7 +181,7 @@ window#waybar.empty #window {
 /* -----------------------------------------------------
  * Custom Modules
  * ----------------------------------------------------- */
-
+#custom-telegram,
 #custom-appmenu {
     background-color: @backgrounddark;
     color: @textcolor1;

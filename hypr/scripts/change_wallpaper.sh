@@ -14,14 +14,22 @@ fi
 # Get the current wallpaper from hyprctl
 CURRENT_WALLPAPER=$(hyprctl hyprpaper list | grep 'Wallpaper' | awk '{print $3}')
 
-# Pick a random wallpaper different from the current one
-while : ; do
-    RANDOM_INDEX=$((RANDOM % ${#WALLPAPERS[@]}))
-    RANDOM_WALLPAPER="${WALLPAPERS[$RANDOM_INDEX]}"
-    if [[ "$RANDOM_WALLPAPER" != "$CURRENT_WALLPAPER" ]]; then
-        break
+# Remove current wallpaper from the list
+FILTERED_WALLPAPERS=()
+for wp in "${WALLPAPERS[@]}"; do
+    if [[ "$wp" != "$CURRENT_WALLPAPER" ]]; then
+        FILTERED_WALLPAPERS+=("$wp")
     fi
 done
+
+if [ ${#FILTERED_WALLPAPERS[@]} -eq 0 ]; then
+    echo "Only one wallpaper available, already in use."
+    exit 0
+fi
+
+# Pick a random wallpaper
+RANDOM_INDEX=$((RANDOM % ${#FILTERED_WALLPAPERS[@]}))
+RANDOM_WALLPAPER="${FILTERED_WALLPAPERS[$RANDOM_INDEX]}"
 
 hyprctl hyprpaper preload "$RANDOM_WALLPAPER"
 

@@ -152,7 +152,6 @@ window#waybar.empty #window {
 #pulseaudio,
 #battery,
 #custom-appmenu,
-#custom-telegram,
 #clock {
     margin-right: 20px;
     font-size: 20px;
@@ -181,7 +180,7 @@ window#waybar.empty #window {
 /* -----------------------------------------------------
  * Custom Modules
  * ----------------------------------------------------- */
-#custom-telegram,
+
 #custom-appmenu {
     background-color: @backgrounddark;
     color: @textcolor1;
@@ -396,4 +395,31 @@ label:focus {
 
 #network.disconnected {
     background-color: #f53c3c;
+}
+
+#custom-btrfs-root,
+#custom-btrfs-varcache,
+#custom-btrfs-varlog,
+#custom-btrfs-home {
+    padding: 0 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* Cores de status baseadas na porcentagem do script */
+.btrfs-normal {
+    color: #4CAF50; /* Verde: Uso OK */
+}
+
+.btrfs-warning {
+    color: #FFC107; /* Amarelo: Uso moderado */
+}
+
+.btrfs-critical {
+    color: #F44336; /* Vermelho: Uso alto */
+}
+
+/* Estilo específico para o modo barra */
+.btrfs-bar {
+    font-family: monospace; /* Garante que a barra de caracteres fique alinhada corretamente */
 }

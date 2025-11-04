@@ -23,11 +23,13 @@ regex = "(ipfs:|ipns:|magnet:|mailto:|gemini://|gopher://|https://|http://|news:
 
 [terminal]
 #shell={program="zellij", args=["-l", "welcome"]}
-#shell={program="zsh"}
-shell={program="zellij"}
+shell={program="zsh"}
 [font]
 size = 8
 
 [cursor]
 style= { shape="Block",blinking="Always" }
 blink_interval=500
+[selection]
+save_to_clipboard = true
+

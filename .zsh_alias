@@ -1,0 +1,41 @@
+# [ ARQUIVO PARA ALIAS ]
+
+# PROJETOS
+alias MS="cd $HOME/projects/aplicacoes/next/mobilereact"
+alias ML="cd $HOME/projects/aplicacoes/next/meulook"
+alias MD="cd $HOME/projects/aplicacoes/next/med-front"
+alias F="cd $HOME/projects/aplicacoes/next/frontend"
+alias A="cd $HOME/projects/aplicacoes/aplicativos"
+alias B="cd $HOME/projects/aplicacoes/backend"
+
+# SSH E CONTAINERS
+alias lp-php="{docker exec -it backend-lookpay-api-1 bash} || {notify-send 'Erro ao tentar acessar o container'}"
+alias web-php="{docker exec -it backend-adm-api-1 bash} || {notify-send 'Erro ao tentar acessar o container'}"
+alias ssh-mp="ssh -i $HOME/.ssh/chave.pem ubuntu@ec2-177-71-146-74.sa-east-1.compute.amazonaws.com"
+alias ssh-ms="ssh -i $HOME/.ssh/chave.pem ubuntu@ec2-177-71-191-151.sa-east-1.compute.amazonaws.com"
+
+# ZELLIJ
+alias zellij="$HOME/.cargo/bin/zellij"
+alias zt="$HOME/.cargo/bin/zellij --layout ~/.config/zellij/layout-default.kdl"
+
+# PROGRAMAS E SCRIPTS
+alias banco="sh $HOME/scripts/banco/index.sh"
+alias apaga="sh $HOME/scripts/apaga-diretorios.sh"
+alias T="$HOME/projects/elegram/init.sh"
+alias HT="nohup $HOME/Documentos/release/NeoHtop > output.log 2>&1 &"
+alias MD-link="$HOME/scripts/abre-link.sh"
+alias DPS="docker ps | awk 'NR>1 {print \$2}'"
+alias f="sh $HOME/scripts/fuzy.sh"
+alias ENV="cp $HOME/.ssh/.env.php $HOME/projects/aplicacoes/backend/apps/adm-api/.env.php && echo '.env.php copiado com sucesso'"
+alias OPS="cd $HOME/projects/aplicacoes/backend/apps/adm-api/opensearch && docker-compose up"
+alias M="cd $HOME/scripts/monitor && yarn start"
+
+alias cd="z"
+alias remove="echo @1 | tr ' ' '\n' | xargs -I{} find . -type d -name '{}' -print0 | xargs -0 rm -rf"
+alias super="spf"
+alias ls="eza -al --icons --group-directories-first --git"
+alias ls2="ls --tree --level=1"
+alias LG="lazygit"
+alias LD="lazydocker"
+alias IPS="curl ipinfo.io"
+alias n="nvim"
